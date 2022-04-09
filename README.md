@@ -10,6 +10,10 @@ Function <b>kNNImpute</b> imputes data by weighted mean of k nearest neighbour. 
 
 Function <b>svdWithGaps</b> imputes data by decomposition of data matrix 'data' into singular vectors and later reconstruct all values.
 
+## Reference
+
+Please refer as
+Mirkes, EM, Zinovyev A, Gorban, AN “Data imputation”, available online on https://github.com/Mirkes/DataImputation, accessed Date_of_Access
 
 ## Acknowledgements
 
