@@ -2,7 +2,7 @@
 
 Data imputation for visualisation
 
-This repository contains two function which can be used for data imputation before data visualisation by elastic graphs, elastic maps or any other techniques.
+This repository contains two function which can be used for data imputation before data visualisation by elastic graphs, elastic maps or any other techniques and one function to remove records and/or features with missing values.
 
 Function <b>degup</b> calculates fraction of missing data in each record and each feature and then remove the record or feature with greatest fraction of missing data. This procedure is repeated until there is records or features with missed data.
 
