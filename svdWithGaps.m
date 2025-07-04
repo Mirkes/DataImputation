@@ -15,7 +15,7 @@ function complete = svdWithGaps(data, varargin)
 %           Default value is 0.0001 which corresponds to difference 0.81 of
 %           degree.
 %       'interval' specifies the type of intervals to use:
-%           'infinit' means that infinite intervals are used.
+%           'infinite' means that infinite intervals are used.
 %           'minMax' means that the same intervals are used for each missed
 %               values. This intervals are defined as 
 %                   [min(data(:, i)), max(data(:, i))]
@@ -89,7 +89,7 @@ function complete = svdWithGaps(data, varargin)
     % Form intervals for specified option
     if ~isnumeric(interval)
         switch lower(interval)
-            case 'infinit'
+            case 'infinite'
                 % Unrestricted case
                 restored = inifinitSVD(data, find(nans), tol, tolConv, verbose);
             case 'minmax'
