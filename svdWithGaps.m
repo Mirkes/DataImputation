@@ -136,7 +136,7 @@ function res = inifinitSVD(data, nans, tol, tolConv, verbose)
 %inifinitSVD implements unrestricted SVD for data with gaps.
 %Inputs:
 %   data is n-by-m matrix of data
-%   nans is vector of indices corresponds to messed value.
+%   nans is vector of indices corresponds to missed value.
 %   tol is tolerance level to defile required number of PCs
 %   tolConv is tolerance level to define PC convergence
 %   verbose is indicator to output accuracy of each iteration
@@ -206,7 +206,7 @@ function res = restrictedSVD(data, nans, tol, tolConv, lo, hi, verbose)
 %
 %Inputs:
 %   data is n-by-m matrix of data
-%   nans is n-by-m matrix with true corresponds to messed value.
+%   nans is n-by-m matrix with true corresponds to missed value.
 %   tol is tolerance level to defile required number of PCs
 %   tolConv is tolerance level to define PC convergence
 %   lo is n-by-m matrix of low boundaries of intervals
