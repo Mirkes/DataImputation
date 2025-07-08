@@ -208,7 +208,7 @@ end
 
 %'Cosine' is function w = cos(0.5 * pi * d / D);
 function w = cosine(dD)
-    w = cos(0.5 * pi * dD .^ 2);
+    w = cos(0.5 * pi * dD);
 end
 
 %'Logistic' is function w = 1 / (exp(d / D) + 2 + exp(- d / D));
@@ -223,7 +223,7 @@ end
 
 %'Silverman' is function w = sin((d / D) / sqrt(2) + pi / 4);
 function w = silverman(dD)
-    w = sin(dD / sqrt(2) + pi / 4);
+    w = exp(dD / sqrt(2)) * sin(dD / sqrt(2) + pi / 4);
 end
 
 function  dist = inifinitDist(data, nans)
