@@ -327,7 +327,7 @@ function dist = individualDist(data, nans, interval)
             ind = v2 < interval(k, :, 1);
             v1(ind1 & ind) = interval(k, ind & ind1, 1);
             ind = v2 > interval(k, :, 2);
-            v1(ind1 & ind) = interval(k, ind & ind1, 1);
+            v1(ind1 & ind) = interval(k, ind & ind1, 2);
             % Complete missed values in v2 as it is required
             v2(ind2) = v1(ind2);
             ind = v1 < interval(kk, :, 1);
