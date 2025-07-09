@@ -47,8 +47,10 @@ function [complete, uncertainty] = kNNImpute(data, k, varargin)
 %
 %Outputs:
 %   complete is n-by-m matrix of double without missing values
-%   uncertainty is n-by-m matrix of double with value of kNN uncertainty
-%       for each value which is missed in data.
+%   uncertainty is an n-by-m matrix of double with value of kNN uncertainty
+%       (unbiased variance of attribute of weighted k nearest values) for each 
+%       value missing in the data. For k=1 this value is undefined and equal to 
+%       NaN. For small k this value is not very accurate.
 
     % Sanity check of inputs
     if nargin<2 
