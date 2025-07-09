@@ -264,10 +264,10 @@ function dist = oneForAllDist(data, nans, interval)
             v2 = data(kk, :);
             % Select attributes which are undefined for both objects and
             % set corresponding attributes to zero
-            ind = ~nans(k, :) & ~nans(kk, :);
-            v1(~ind) = 0;
-            v2(~ind) = 0;
-            % Select set of attributes which are known fro one object inly
+            ind = nans(k, :) & nans(kk, :);
+            v1(ind) = 0;
+            v2(ind) = 0;
+            % Select set of attributes which are known for one object only
             ind1 = nans(k, :) & ~nans(kk, :);
             ind2 = ~nans(k, :) & nans(kk, :);
             % Complete missed values in v1 as it is required
