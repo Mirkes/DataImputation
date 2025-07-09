@@ -306,9 +306,9 @@ function dist = individualDist(data, nans, interval)
         v1 = data(k, :);
         for kk = k + 1:n
             v2 = data(kk, :);
-            % Select attributes which are indeffinit for both objects and
+            % Select attributes which are indefinit for both objects and
             % set corresponding attributes to middle value
-            ind = ~nans(k, :) & ~nans(kk, :);
+            ind = nans(k, :) & nans(kk, :);
             % Set zero for all
             v1(ind) = 0;
             v2(ind) = 0;
